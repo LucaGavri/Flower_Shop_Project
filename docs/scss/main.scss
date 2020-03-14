@@ -256,6 +256,42 @@ section {
         }
       }
     }
+
+    .scrollAnim{
+      width: 10px;
+      height: 30px;
+      border-radius: 5px;
+      border: 1px solid #eeeeee;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      &:after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #eeeeee;
+        animation: scroll 1s infinite ease-in-out;
+      }
+
+      @keyframes scroll {
+        0% {
+          top: 2px
+        }
+        50%{
+          top: 22px;
+        }
+        100%{
+          top: 2px;
+        }
+      }
+    }
   }
 
   .sectionAbout {
